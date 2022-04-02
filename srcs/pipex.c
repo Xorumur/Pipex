@@ -89,6 +89,5 @@ int	main(int argc, char **argv, char **envp)
 	if (waitpid(pipex->child2, NULL, 0) < 0)
 		end_program(ERROR_WAIT_CHILD1, pipex, errno);
 	free_pipex(pipex);
-	system("leaks pipex");
 	return (0);
 }
